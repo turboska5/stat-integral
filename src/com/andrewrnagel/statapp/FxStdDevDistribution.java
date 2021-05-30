@@ -2,7 +2,7 @@ package com.andrewrnagel.statapp;
 
 import org.apache.commons.math3.analysis.UnivariateFunction;
 
-public class StatDistributionFunction implements UnivariateFunction {
+public class FxStdDevDistribution implements UnivariateFunction {
     public double value(double x) {
         return (Math.pow(Math.E, (Math.pow(x, 2) / -2))) / (Math.sqrt(2 * Math.PI));
     }
