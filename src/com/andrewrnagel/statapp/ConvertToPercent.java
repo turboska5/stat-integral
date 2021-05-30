@@ -13,7 +13,7 @@ public class ConvertToPercent {
             UnivariateFunction stdDevDistributionAsUnivariateFx = new FxStdDevDistribution();
             double solution = new SimpsonIntegrator(10, 20).integrate(10_000, stdDevDistributionAsUnivariateFx, lowerBound, upperBound);
             System.out.println("The Simpson integration from [" + lowerBound + "] to [" + upperBound + "] " +
-                "of function [" + stdDevDistributionAsUnivariateFx.toString() + "] is: [" + solution + "]");
+                "of function [" + stdDevDistributionAsUnivariateFx + "] is: [" + solution + "]");
         }
     }
 
