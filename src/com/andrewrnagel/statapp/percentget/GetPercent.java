@@ -1,17 +1,17 @@
-package com.andrewrnagel.statapp;
+package com.andrewrnagel.statapp.percentget;
 
 import org.apache.commons.math3.analysis.UnivariateFunction;
 import org.apache.commons.math3.analysis.integration.SimpsonIntegrator;
 
-public class ConvertToPercent {
+public class GetPercent {
 
     public static void main(String[] args) {
         if(args.length == 2) {
-            int lowerBound = Integer.parseInt(args[0]);
-            int upperBound = Integer.parseInt(args[1]);
+            double lowerBound = Double.parseDouble(args[0]);
+            double upperBound = Double.parseDouble(args[1]);
 
             UnivariateFunction stdDevDistributionAsUnivariateFx = new FxStdDevDistribution();
-            double solution = new SimpsonIntegrator(10, 20).integrate(10_000, stdDevDistributionAsUnivariateFx, lowerBound, upperBound);
+            double solution = new SimpsonIntegrator(3, 10).integrate(25_000, stdDevDistributionAsUnivariateFx, lowerBound, upperBound);
             System.out.println("The Simpson integration from [" + lowerBound + "] to [" + upperBound + "] " +
                 "of function [" + stdDevDistributionAsUnivariateFx + "] is: [" + solution + "]");
         }

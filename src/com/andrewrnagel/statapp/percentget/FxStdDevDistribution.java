@@ -1,15 +1,15 @@
-package com.andrewrnagel.statapp;
+package com.andrewrnagel.statapp.percentget;
 
 import org.apache.commons.math3.analysis.UnivariateFunction;
 
 public class FxStdDevDistribution implements UnivariateFunction {
     public double value(double x) {
-        return (Math.pow(Math.E, (Math.pow(x, 2) / -2))) / (Math.sqrt(2 * Math.PI));
+        return Math.pow(Math.E, (-0.5 * x * x)) / (Math.sqrt(2 * Math.PI));
     }
 
     @Override
     public String toString() {
-        return "(Math.pow(Math.E, (Math.pow(x, 2) / -2))) / (Math.sqrt(2 * Math.PI))";
+        return "Math.pow(Math.E, (-0.5 * x * x)) / (Math.sqrt(2 * Math.PI))";
     }
 
 }
