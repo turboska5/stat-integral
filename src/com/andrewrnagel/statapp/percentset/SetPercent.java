@@ -11,7 +11,7 @@ public class SetPercent {
             double upperBound = Double.parseDouble(args[1]);
 
             UnivariateFunction inverseStdDevDistributionAsUnivariateFx = new FxInverseStdDevDistribution();
-            double solution = new SimpsonIntegrator(1, 10).integrate(25_000, inverseStdDevDistributionAsUnivariateFx, lowerBound, upperBound);
+            double solution = new SimpsonIntegrator(3, 10).integrate(25_000, inverseStdDevDistributionAsUnivariateFx, lowerBound, upperBound);
             System.out.println("The Simpson integration from [" + lowerBound + "] to [" + upperBound + "] " +
                 "of function [" + inverseStdDevDistributionAsUnivariateFx + "] is: [" + solution + "]");
         }
