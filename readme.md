@@ -1,11 +1,10 @@
 # stat-integral
 
-## GetPercent
+## Norm
 
 ### _How to run the application_
-Two arguments are required at runtime:
-* arg[0] is the lower bound of the integral, a Double represented as a String.
-* arg[1] is the upper bound of the integral, a Double represented as a String.
+One argument is supplied at runtime:
+* arg[0] is the number of standard deviations, a Double represented as a String.
 
 ### _What occurs within the application_
 The application will then evaluate the integral of the function
@@ -13,4 +12,15 @@ The application will then evaluate the integral of the function
 using the Apache Commons Math3 Simpson Integrator.
 
 ### _What is returned by the application_
-The returned value is the percentage of the covered population expressed as a decimal.
+The returned value is the percent of population encapsulated from the mean, represented as a Double.
+
+
+
+## NormInv
+
+### _How to run the application_
+One argument is supplied at runtime:
+* arg[0] is the percent of population encapsulated, a Double represented as a String.
+
+### _What is returned by the application_
+The returned value is the number of standard deviations, represented as a Double.
