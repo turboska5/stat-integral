@@ -6,9 +6,8 @@ public class Norm {
     //Main Method
     public static void main(String[] args) {
         if(args.length == 1 || args.length == 2) {
-            double lowerBound = -3;
-            double upperBound = 3;
-            double percentage = 0.998;
+            double lowerBound = -4;
+            double upperBound = 4;
 
             if(args.length == 1) {
                 double numStdDevsFromMean = Double.parseDouble(args[0]);
@@ -21,8 +20,7 @@ public class Norm {
                 upperBound = Double.parseDouble(args[1]);
             }
 
-            percentage = integrate(lowerBound, upperBound);
-            logResult(lowerBound, upperBound, percentage);
+            logResult(lowerBound, upperBound, integrate(lowerBound, upperBound));
         }
     }
 
